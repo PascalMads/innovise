@@ -203,7 +203,7 @@ header {
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: box-shadow 0.4s ease, transform 0.4s ease;
-    margin-bottom: 30px;
+    margin-bottom: 0px;
 }
 
 .card:hover {
@@ -225,8 +225,8 @@ header {
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     background: #fff;
-    padding: 25px;
-    margin: 20px 0;
+    padding-top: 10px;
+    margin-bottom: 20px;
     transition: box-shadow 0.4s ease, transform 0.4s ease;
 }
 
@@ -240,7 +240,7 @@ header {
     width: 130px;
     height: 130px;
     object-fit: cover;
-    margin-bottom: 20px;
+    margin-bottom: 0px;
     transition: transform 0.4s ease;
 }
 
@@ -253,6 +253,9 @@ header {
     border-radius: 8px;
     padding: 20px;
     transition: background-color 0.4s ease;
+}
+.profile-card .profile-text p{
+    font-size:clamp(14px, 1.5vw, 18px);
 }
 
 .profile-card:hover .profile-text {
