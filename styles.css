@@ -61,7 +61,7 @@ header {
     margin-right: 8px;
     vertical-align: middle;
 }
-/* Media Queries */
+/* Media Queries tablet */
 @media (max-width: 992px) {
     .navbar-nav {
         flex-direction: column;
@@ -77,7 +77,7 @@ header {
         margin-right: 5px;
     }
 }
-  /* Media Queries */
+  /* Media Queries mobile*/
 @media (max-width: 576px) {
     .navbar {
         padding: 0;
@@ -122,6 +122,7 @@ header {
     justify-content: space-around;
     margin-top: 20px;
 }
+
 .icones-hero img{
     font-size: 24px;
     margin: 10px;
@@ -131,7 +132,7 @@ header {
     transform: scale(1.2);
 }
 
-/* Animações de rolagem */
+/* Animações de rolagem fim */
 
 .hero h1 {
     font-size: 67px;
@@ -240,14 +241,24 @@ header {
 
 /* Cartões de perfil */
 .profile-card {
+    display: flex;
+    flex-wrap: wrap;
+    gap:  20px;
     text-align: center;
     border: none;
+    align-items: center;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     background: #fff;
     padding-top: 10px;
     margin-bottom: 20px;
     transition: box-shadow 0.4s ease, transform 0.4s ease;
+}
+.profile-card{
+    flex: 1;
+    min-width: 250px;
+    flex-direction: column;
+    align-items: center;
 }
 
 .profile-card:hover {
