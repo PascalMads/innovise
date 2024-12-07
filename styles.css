@@ -1,7 +1,10 @@
 /* Reset básico e estilos globais */
+html{
+    scroll-behavior: smooth;
+}
 body {
-    font-family: 'Montserrat', sans-serif;
-    background-color: #F0F0F0;
+    font-family: 'times new roman', serif;
+    background-color: #003070;
     color: #333;
     margin: 0;
     padding: 0;
@@ -11,11 +14,13 @@ body {
 header {
     background-color: #003070;
     color: #fff;
-    padding: 20px 0;
+    padding: 2px 0;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
 .navbar {
+    background-color: #003070;
+    position:fixed;
     display: flex;
     justify-content: center;
     width: 100%;
@@ -34,6 +39,7 @@ header {
 .navbar-nav .nav-link {
     color: #fff !important;
     font-weight: 500;
+    padding: 10px 15px;
 }
 
 .navbar-nav .nav-link:hover {
@@ -55,7 +61,7 @@ header {
     margin-right: 8px;
     vertical-align: middle;
 }
-
+/* Media Queries tablet */
 @media (max-width: 992px) {
     .navbar-nav {
         flex-direction: column;
@@ -71,7 +77,7 @@ header {
         margin-right: 5px;
     }
 }
-
+  /* Media Queries mobile*/
 @media (max-width: 576px) {
     .navbar {
         padding: 0;
@@ -103,20 +109,43 @@ header {
 }
 
 .hero-content {
+    margin-top: 40px;
     position: relative;
     z-index: 2;
     text-align: center;
 }
 
+/* Animações de rolagem */
+
+.icones-hero {
+    display:flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.icones-hero img{
+    font-size: 24px;
+    margin: 10px;
+    transition: all 0.3s ease;
+}
+.icones-hero img:hover {
+    transform: scale(1.2);
+}
+
+/* Animações de rolagem fim */
+
 .hero h1 {
-    font-size: 3.5rem;
-    font-weight: 600;
-    margin-bottom: 20px;
-    transition: transform 0.8s ease-in-out;
+    font-size: 67px;
+    font-weight: bold;
+    color:#DCAA5A;
+    text-align: center;
+    margin-bottom: 30px;
+    transition: transform 0.4s ease;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .hero p {
-    font-size: 2.0rem;
+    font-size: 24px;
     font-weight: 500;
     margin: 30px;
     margin-bottom: 30px;
@@ -188,14 +217,14 @@ header {
     text-align: center;
     color: #003070;
 }
-/* Cartões */
+/* Cartões: Cases de Sucesso */
 .card {
     text-align: center;
     border: none;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: box-shadow 0.4s ease, transform 0.4s ease;
-    margin-bottom: 30px;
+    margin-bottom: 0px;
 }
 
 .card:hover {
@@ -212,14 +241,24 @@ header {
 
 /* Cartões de perfil */
 .profile-card {
+    display: flex;
+    flex-wrap: wrap;
+    gap:  20px;
     text-align: center;
     border: none;
+    align-items: center;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     background: #fff;
-    padding: 25px;
-    margin: 20px 0;
+    padding-top: 10px;
+    margin-bottom: 20px;
     transition: box-shadow 0.4s ease, transform 0.4s ease;
+}
+.profile-card{
+    flex: 1;
+    min-width: 250px;
+    flex-direction: column;
+    align-items: center;
 }
 
 .profile-card:hover {
@@ -232,7 +271,7 @@ header {
     width: 130px;
     height: 130px;
     object-fit: cover;
-    margin-bottom: 20px;
+    margin-bottom: 0px;
     transition: transform 0.4s ease;
 }
 
@@ -245,6 +284,9 @@ header {
     border-radius: 8px;
     padding: 20px;
     transition: background-color 0.4s ease;
+}
+.profile-card .profile-text p{
+    font-size:clamp(14px, 1.5vw, 18px);
 }
 
 .profile-card:hover .profile-text {
